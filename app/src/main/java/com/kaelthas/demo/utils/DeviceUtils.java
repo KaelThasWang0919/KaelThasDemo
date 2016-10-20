@@ -19,7 +19,7 @@ public class DeviceUtils {
 
     /**
      * @param context 上下文
-     * @author jinghq
+     *
      * @category 获得IMSI
      */
     public static String getIMSI(Context context) {
@@ -37,7 +37,7 @@ public class DeviceUtils {
 
     /**
      * @param context 上下文
-     * @author jinghq
+     *
      * @category 获得IMSI
      */
     public static String getIMEI(Context context) {
@@ -55,7 +55,7 @@ public class DeviceUtils {
 
     /**
      * @param context 上下文
-     * @author jinghq
+     *
      * @category dip比例参数
      */
     public static float GetScaleFloat(Context context) {
@@ -65,7 +65,7 @@ public class DeviceUtils {
     /**
      * @param context  上下文
      * @param dipValue dip值
-     * @author jinghq
+     *
      * @category dip转px
      */
     public static int dip2px(Context context, float dipValue) {
@@ -75,7 +75,7 @@ public class DeviceUtils {
 
     /**
      * @param context 上下文
-     * @author jinghq
+     *
      * @category 屏幕宽度px
      */
     public static int GetScreenWidth(Context context) {
@@ -84,7 +84,7 @@ public class DeviceUtils {
 
     /**
      * @param context 上下文
-     * @author jinghq
+     *
      * @category 屏幕高度px
      */
     public static int GetScreenHeight(Context context) {

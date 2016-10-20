@@ -9,7 +9,7 @@ import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.HttpHeaderParser;
-import com.kaelthas.demo.App.AppConfig;
+import com.kaelthas.demo.base.AppConfig;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;

@@ -25,7 +25,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
     //上拉刷新 下拉加载框架
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
-
     //自定义下拉刷新
     compile 'in.srain.cube:ultra-ptr:1.0.11'
+
+
+    //facebook图片处理库   加载状态、圆角剪裁等
+    compile 'com.facebook.fresco:fresco:0.14.1'
 }

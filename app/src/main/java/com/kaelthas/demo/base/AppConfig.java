@@ -1,12 +1,10 @@
-package com.kaelthas.demo.App;
-
-import android.app.Application;
+package com.kaelthas.demo.base;
 
 /**
  * Created by KaelThas.Wang on 2016/10/20.
  * E_mail KaelThas.Wang0919@gmail.com
  */
-public class AppConfig extends Application {
+public class AppConfig  {
 
     /**
      * Volley 超时时间
@@ -17,5 +15,5 @@ public class AppConfig extends Application {
     /**
      * @category 缓存路径
      */
-    public final static String CACHE_PATH = "/winekar/cache/";
+    public final static String CACHE_PATH = "/kaelthas/cache/";
 }
