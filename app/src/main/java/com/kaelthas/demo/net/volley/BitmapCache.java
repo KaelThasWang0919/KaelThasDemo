@@ -1,14 +1,15 @@
 package com.kaelthas.demo.net.volley;
 
 import android.graphics.Bitmap;
+import android.os.Environment;
 import android.support.v4.util.LruCache;
 
 import com.android.volley.toolbox.ImageLoader.ImageCache;
-import com.winekar.app.base.AppConfig;
-import com.winekar.app.common.CommonUtils;
-import com.winekar.app.toolkit.HFile;
-import com.winekar.app.toolkit.HImage;
-import com.winekar.app.toolkit.HText;
+import com.kaelthas.demo.App.AppConfig;
+import com.kaelthas.demo.utils.FileUtils;
+import com.kaelthas.demo.utils.ImageUtils;
+import com.kaelthas.demo.utils.TextUtils;
+
 
 import java.io.File;
 
@@ -42,12 +43,12 @@ public class BitmapCache implements ImageCache {
     public Bitmap getSdCardBitmap(String key, String path) {
 
         Bitmap bitmap = null;
-        sdcardCachePath = HFile.getSDCardRoot() + AppConfig.CACHE_PATH;
+        sdcardCachePath = getSDCardRoot() + AppConfig.CACHE_PATH;
 
-        CommonUtils.logWrite("getSdCardBitmap", "key:" + key + ",path:" + sdcardCachePath);
 
-        if (HFile.isFileExist(new File(sdcardCachePath))) {
-            bitmap = HImage.getBitmap(new File(sdcardCachePath));
+
+        if (FileUtils.isFileExist(new File(sdcardCachePath))) {
+            bitmap = ImageUtils.getBitmap(new File(sdcardCachePath));
 
             if (bitmap != null) {
 //                HLog.i("fileloader:", "文件已经存在");
@@ -66,10 +67,25 @@ public class BitmapCache implements ImageCache {
 
     @Override
     public void putBitmap(String url, Bitmap bitmap) {
-        if (HText.isEmpty(url)) {
-            cacheFileName = HFile.getMd5UrlName(url);
+        if (TextUtils.isEmpty(url)) {
+            cacheFileName = FileUtils.getMd5UrlName(url);
         }
 
         mCache.put(url, bitmap);
+    }
+
+
+
+
+    /**
+     * 得到当前外部存储设备的目录
+     */
+    private static String SDCardRoot = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator;
+
+    /**
+     * @return 当前外部存储设备的目录
+     */
+    public static String getSDCardRoot() {
+        return SDCardRoot;
     }
 }
