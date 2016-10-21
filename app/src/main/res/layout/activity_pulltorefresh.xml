@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <in.srain.cube.views.ptr.PtrFrameLayout
-        xmlns:my="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <!--<in.srain.cube.views.ptr.PtrFrameLayout-->
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
 
-    </in.srain.cube.views.ptr.PtrFrameLayout>
+    <!--</in.srain.cube.views.ptr.PtrFrameLayout>-->
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_baidu"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundingBorderColor="#000"
+        fresco:actualImageScaleType="centerInside"
+        fresco:backgroundImage="@android:color/holo_blue_dark"/>
 
 
 </RelativeLayout>
