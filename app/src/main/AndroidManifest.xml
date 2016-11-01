@@ -14,7 +14,6 @@
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -23,7 +22,13 @@
             android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.BadgeViewActivity"
+            android:label="测试"
             android:parentActivityName=".activity.MainActivity">
+            <!--两个入口-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 
