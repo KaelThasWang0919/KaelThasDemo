@@ -1,6 +1,5 @@
 package com.kaelthas.demo.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -20,9 +19,7 @@ public class PullToRefreshActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pulltorefresh);
-
-        getActionBar().setTitle("Facebook Fresco演示");
-
+        setTitle("SimpleDraweeView 示例");
 
         mSimpleDraweeView= (SimpleDraweeView) findViewById(R.id.sd_baidu);
         mSimpleDraweeView.setImageURI("https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png");
