@@ -10,7 +10,7 @@ import com.kaelthas.demo.R;
  * Created by KaelThas.Wang on 16/9/6.
  * E_mail KaelThas.Wang0919@gmail.com
  */
-public class PullToRefreshActivity extends AppCompatActivity {
+public class SimpleDraweeViewActivity extends AppCompatActivity {
 
 
     private SimpleDraweeView mSimpleDraweeView;
@@ -18,7 +18,7 @@ public class PullToRefreshActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pulltorefresh);
+        setContentView(R.layout.activity_simple_draw_view);
         setTitle("SimpleDraweeView 示例");
 
         mSimpleDraweeView= (SimpleDraweeView) findViewById(R.id.sd_baidu);

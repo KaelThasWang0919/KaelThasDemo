@@ -38,7 +38,7 @@ public class MainActivity extends BaseActivity {
 
     private void addDemo() {
         mDemoList.clear();
-        mDemoList.add(new Demo("下拉刷新", PullToRefreshActivity.class));
-        mDemoList.add(new Demo("View添加角标(BadgeView)", BadgeViewActivity.class));
+        mDemoList.add(new Demo("FaceBook图片处理工具\n(SimpleDraweeView)", SimpleDraweeViewActivity.class));
+        mDemoList.add(new Demo("View添加角标\n(BadgeView)", BadgeViewActivity.class));
     }
 }

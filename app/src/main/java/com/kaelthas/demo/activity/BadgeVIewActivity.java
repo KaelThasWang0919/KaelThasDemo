@@ -15,6 +15,7 @@ public class BadgeViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_badge_view);
+        setTitle("添角标示例");
 
         TextView tv = (TextView) findViewById(R.id.tv);
 
