@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.kaelthas.demo.R;
-import com.kaelthas.demo.baen.Demo;
+import com.kaelthas.demo.bean.Demo;
 
 import java.util.List;
 

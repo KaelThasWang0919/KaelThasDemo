@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.kaelthas.demo.R;
 import com.kaelthas.demo.adapter.DemoAdapter;
-import com.kaelthas.demo.baen.Demo;
+import com.kaelthas.demo.bean.Demo;
 import com.kaelthas.demo.base.BaseActivity;
 
 import java.util.ArrayList;
@@ -40,5 +40,6 @@ public class MainActivity extends BaseActivity {
         mDemoList.clear();
         mDemoList.add(new Demo("FaceBook图片处理工具\n(SimpleDraweeView)", SimpleDraweeViewActivity.class));
         mDemoList.add(new Demo("View添加角标\n(BadgeView)", BadgeViewActivity.class));
+        mDemoList.add(new Demo("数据双向绑定\n(DataBinding)", DataBindingActivity.class));
     }
 }
