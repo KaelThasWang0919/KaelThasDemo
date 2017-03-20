@@ -11,6 +11,7 @@ import com.kaelthas.demo.base.BaseActivity;
 
 public class BadgeViewActivity extends BaseActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
