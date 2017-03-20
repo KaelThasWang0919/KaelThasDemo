@@ -30,6 +30,9 @@
                 <!--<category android:name="android.intent.category.LAUNCHER"/>-->
             <!--</intent-filter>-->
         </activity>
+
+        <!--数据双向绑定 DataBinding-->
+        <activity android:name=".activity.DataBindingActivity"/>
     </application>
 
 </manifest>
