@@ -2,6 +2,8 @@ package com.kaelthas.demo.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.kaelthas.demo.R;
 import com.kaelthas.demo.bean.User;
@@ -15,6 +17,7 @@ import com.kaelthas.demo.databinding.ActivityDataBindingBinding;
 
 public class DataBindingActivity extends BaseActivity {
 
+    private User mUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +26,15 @@ public class DataBindingActivity extends BaseActivity {
 
         ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this,
                 R.layout.activity_data_binding);
-        User user = new User("张三", "100001");
-        binding.setUser(user);
+        mUser = new User("张三", "100001");
+        binding.setUser(mUser);
+
+        binding.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mUser.setUserName("李四");
+            }
+        });
 
 
     }

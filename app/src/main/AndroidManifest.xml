@@ -26,13 +26,15 @@
             android:parentActivityName=".activity.MainActivity">
             <!--两个入口-->
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
             <!--</intent-filter>-->
         </activity>
 
         <!--数据双向绑定 DataBinding-->
-        <activity android:name=".activity.DataBindingActivity"/>
+        <activity
+            android:name=".activity.DataBindingActivity"
+            android:parentActivityName=".activity.MainActivity"/>
     </application>
 
 </manifest>

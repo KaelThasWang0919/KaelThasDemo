@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:gravity="center"
-        android:textSize="16sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/recycler_item_margin"
-        android:textColor="@color/white"
-        android:background="@drawable/bg_radius"
-        android:id="@+id/description"
-        android:layout_width="200dp"
-        android:layout_height="40dp"/>
-</LinearLayout>
+    <data>
+
+        <variable
+            name="item"
+            type="com.kaelthas.demo.bean.Demo"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/recycler_item_margin"
+            android:background="@drawable/bg_radius"
+            android:gravity="center"
+            android:text="@{item.description}"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</layout>
