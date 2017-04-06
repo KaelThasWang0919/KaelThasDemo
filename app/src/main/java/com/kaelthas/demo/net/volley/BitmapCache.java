@@ -6,9 +6,9 @@ import android.support.v4.util.LruCache;
 
 import com.android.volley.toolbox.ImageLoader.ImageCache;
 import com.kaelthas.demo.base.AppConfig;
-import com.kaelthas.demo.utils.FileUtils;
-import com.kaelthas.demo.utils.ImageUtils;
-import com.kaelthas.demo.utils.TextUtils;
+import com.kaelthas.demo.utils.old.FileUtils;
+import com.kaelthas.demo.utils.old.ImageUtils;
+import com.kaelthas.demo.utils.old.TextUtils;
 
 
 import java.io.File;

@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.kaelthas.demo">
 
+    <!-- 网络访问 -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <application
+    <!-- 调用相机 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+
+   <application
         android:name=".base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,6 +24,7 @@
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -24,17 +35,26 @@
             android:name=".activity.BadgeViewActivity"
             android:label="测试"
             android:parentActivityName=".activity.MainActivity">
-            <!--两个入口-->
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN"/>-->
-            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
+
+            <!-- 两个入口 -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
         </activity>
 
-        <!--数据双向绑定 DataBinding-->
+        <!-- 数据双向绑定 DataBinding -->
         <activity
             android:name=".activity.DataBindingActivity"
             android:parentActivityName=".activity.MainActivity"/>
+
+        <!-- 二维码生成,扫描,图片识别 -->
+        <activity
+            android:name=".activity.QRCodeActivity"
+            android:parentActivityName=".activity.MainActivity">
+        </activity>
+        <activity android:name=".activity.ZXingScanActivity">
+        </activity>
     </application>
 
 </manifest>

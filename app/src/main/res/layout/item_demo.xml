@@ -16,11 +16,11 @@
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/recycler_item_margin"
-            android:background="@drawable/bg_radius"
+            android:background="@drawable/bg_radius_blue"
             android:gravity="center"
             android:text="@{item.description}"
             android:textColor="@color/white"

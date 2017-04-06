@@ -1,4 +1,4 @@
-package com.kaelthas.demo.utils;
+package com.kaelthas.demo.utils.old;
 
 import android.app.Activity;
 import android.content.Context;

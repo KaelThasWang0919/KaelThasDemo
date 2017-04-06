@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 public class BaseActivity extends AppCompatActivity {
     protected Context mContext;
+    protected final String TAG=this.getClass().getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

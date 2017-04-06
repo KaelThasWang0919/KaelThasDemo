@@ -30,7 +30,7 @@ public class BadgeViewActivity extends BaseActivity {
         badgeView.setBadgeGravity(Gravity.BOTTOM | Gravity.RIGHT);//设置徽章的位置
         badgeView.setBadgeCount(2);//基础的数字徽章
         badgeView.setText("等待");//文字徽章
-        badgeView.setBackgroundResource(R.drawable.bg_radius);//设置背景  这里用圆角图片
+        badgeView.setBackgroundResource(R.drawable.bg_radius_blue);//设置背景  这里用圆角图片
         //badgeView.setTypeface();  设置字体
         badgeView.setBackground(12,R.color.bule);//设置内容及背景颜色
 //        badgeView.setBackground(getResources().getDrawable(R.mipmap.ic_launcher));

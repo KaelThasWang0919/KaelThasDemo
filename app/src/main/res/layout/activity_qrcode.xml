@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:padding="@dimen/activity_common_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_QrCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_match_height"
+            android:background="@drawable/bg_radius_white"
+            android:hint="输入要生成的二维码"/>
+        <Button
+            android:text="生成二维码"
+            android:layout_marginTop="@dimen/activity_common_padding"
+            android:background="@drawable/bg_radius_blue"
+            android:id="@+id/btn_create_qrCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_match_height"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/img_QrCode"
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <Button
+            android:text="扫描二维码"
+            android:layout_marginTop="@dimen/activity_common_padding"
+            android:background="@drawable/bg_radius_blue"
+            android:id="@+id/btn_scan_qrCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_match_height"/>
+
+        <Button
+            android:text="识别相册中的二维码"
+            android:layout_marginTop="@dimen/activity_common_padding"
+            android:background="@drawable/bg_radius_blue"
+            android:id="@+id/btn_read_qrCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_match_height"/>
+
+
+
+    </LinearLayout>
+
+
+</layout>
