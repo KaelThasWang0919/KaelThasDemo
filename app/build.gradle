@@ -9,7 +9,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.kaelthas.demo"
+        applicationId "wang.kaelthas.demo"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
@@ -41,7 +41,7 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'in.srain.cube:ultra-ptr:1.0.11'
 
-    //图片选择器
+    //仿微信 图片选择器
     compile 'com.lzy.widget:imagepicker:0.5.1'
 
     //facebook图片处理库   加载状态、圆角剪裁等

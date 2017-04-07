@@ -42,5 +42,6 @@ public class MainActivity extends BaseActivity {
         mDemoList.add(new Demo("View添加角标\n(BadgeView)", BadgeViewActivity.class));
         mDemoList.add(new Demo("数据双向绑定\n(DataBinding)", DataBindingActivity.class));
         mDemoList.add(new Demo("二维码扫描`生成`识别\n(ZXing)", QRCodeActivity.class));
+        mDemoList.add(new Demo("友盟三方分享`登录\n(qq,微信,新浪微博)", UmengSocialActivity.class));
     }
 }
