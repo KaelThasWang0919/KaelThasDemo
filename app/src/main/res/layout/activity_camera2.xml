@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <TextureView
+            android:id="@+id/tv_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:background="@drawable/bg_circle_white"
+            android:src="@android:drawable/ic_menu_camera"/>
+
+        <ImageView
+            android:id="@+id/iv_camera_result"
+            android:layout_width="180dp"
+            android:layout_height="320dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:id="@+id/iv_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_rotate"/>
+
+        <TextView
+            android:layout_margin="@dimen/padding_large"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_flash_mode"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,4 +1,4 @@
-package com.kaelthas.demo.activity;
+package com.kaelthas.demo.ui.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;

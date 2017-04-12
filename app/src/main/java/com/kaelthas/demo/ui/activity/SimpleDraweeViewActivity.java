@@ -1,4 +1,4 @@
-package com.kaelthas.demo.activity;
+package com.kaelthas.demo.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

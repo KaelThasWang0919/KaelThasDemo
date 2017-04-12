@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:padding="@dimen/padding_small"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btn_camera1"
+            android:text="Camera1"
+            style="@style/BtnMatchWidth"/>
+
+        <Button
+            android:layout_marginTop="@dimen/padding_small"
+            android:id="@+id/btn_camera2"
+            android:text="Camera2"
+            style="@style/BtnMatchWidth"/>
+    </LinearLayout>
+</layout>

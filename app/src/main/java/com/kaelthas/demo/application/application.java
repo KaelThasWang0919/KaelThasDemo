@@ -18,11 +18,12 @@ public class application extends Application {
     public void onCreate() {
         super.onCreate();
         UMShareAPI.get(this);
-        Config.DEBUG=true;
+        Config.DEBUG=false;
     }
 
     {
         PlatformConfig.setQQZone("1106087834","UMwn70SVJXU2oQnj");
+        PlatformConfig.setWeixin("wx4f3f81274e8b5dd9","ed759d6ae0eb9dc5e41d54f41b6aba46");
     }
 
 }

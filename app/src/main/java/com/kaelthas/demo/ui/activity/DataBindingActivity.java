@@ -1,9 +1,8 @@
-package com.kaelthas.demo.activity;
+package com.kaelthas.demo.ui.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.kaelthas.demo.R;
 import com.kaelthas.demo.bean.User;

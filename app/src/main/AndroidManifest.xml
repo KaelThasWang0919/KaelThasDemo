@@ -8,12 +8,11 @@
 
     <!-- 调用相机 -->
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
     <!-- 震动 -->
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- 闪光灯 -->
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
-
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -31,13 +30,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="5785ea8b67e58e825600179c" >
+            android:value="5785ea8b67e58e825600179c">
         </meta-data>
 
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -45,12 +43,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SimpleDraweeViewActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:name=".ui.activity.SimpleDraweeViewActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
         <activity
-            android:name=".activity.BadgeViewActivity"
+            android:name=".ui.activity.BadgeViewActivity"
             android:label="测试"
-            android:parentActivityName=".activity.MainActivity">
+            android:parentActivityName=".ui.activity.MainActivity">
 
             <!-- 两个入口 -->
             <!-- <intent-filter> -->
@@ -61,26 +59,43 @@
 
         <!-- 数据双向绑定 DataBinding -->
         <activity
-            android:name=".activity.DataBindingActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+            android:name=".ui.activity.DataBindingActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
 
         <!-- 二维码生成,扫描,图片识别 -->
         <activity
-            android:name=".activity.QRCodeActivity"
-            android:parentActivityName=".activity.MainActivity">
+            android:name=".ui.activity.QRCodeActivity"
+            android:parentActivityName=".ui.activity.MainActivity">
         </activity>
 
-        <!--ZXing摄像头扫描-->
-        <activity android:name=".activity.ZXingScanActivity">
+        <!-- ZXing摄像头扫描 -->
+        <activity android:name=".ui.activity.ZXingScanActivity">
         </activity>
 
-        <!--友盟登录,分享-->
-        <activity android:name=".activity.UmengSocialActivity">
+        <!-- 友盟登录,分享 -->
+        <activity android:name=".ui.activity.UmengSocialActivity">
         </activity>
 
 
-        <!--微信分享.登录需要自己创建ac继承WXCallbackActivity-->
-        <!--同理需要建立回调的平台还有支付宝与易信 详情查看文档-->
+        <!--相机调用-->
+        <activity
+            android:name=".ui.activity.CameraActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
+
+        <!--camera1-->
+        <activity
+            android:name=".ui.activity.Camera1Activity"
+            android:parentActivityName=".ui.activity.CameraActivity"/>
+
+
+        <!--camera2-->
+        <activity
+            android:name=".ui.activity.Camera2Activity"
+            android:parentActivityName=".ui.activity.CameraActivity"/>
+
+
+        <!-- 微信分享.登录需要自己创建ac继承WXCallbackActivity -->
+        <!-- 同理需要建立回调的平台还有支付宝与易信 详情查看文档 -->
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -88,26 +103,26 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
-
-        <!--qq精简版-->
+        <!-- qq精简版 -->
         <activity
             android:name="com.umeng.qq.tencent.AuthActivity"
             android:launchMode="singleTask"
-            android:noHistory="true" >
-
+            android:noHistory="true">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="tencent1106087834" />
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1106087834"/>
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
     </application>
 
 </manifest>
