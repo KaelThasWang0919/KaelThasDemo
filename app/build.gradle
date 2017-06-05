@@ -21,8 +21,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        armv7 {
+            ndk {
+                abiFilters "armeabi-v7a", ""
+            }
+        }
+        x86 {
+            ndk {
+                abiFilters "x86", ""
+            }
+        }
+    }
 }
 
+
+//repositories {
+//    maven { url 'https://github.com/500px/500px-android-blur/raw/master/releases/' }
+//}
+
+
+repositories {
+    maven { url 'https://github.com/500px/500px-android-blur/raw/master/releases/' }
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
@@ -31,8 +53,8 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:24.2.1'
 
-
-
+    //第三方WebView23.53.589.4
+    compile 'org.xwalk:xwalk_core_library:23.53.589.4'
 
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:recyclerview-v7:24.2.1'
