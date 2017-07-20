@@ -97,6 +97,10 @@
             android:name=".ui.activity.CrosswalkActivity">
         </activity>
 
+        <activity
+            android:parentActivityName=".ui.activity.CameraActivity"
+            android:name=".ui.activity.ServiceActivity"/>
+
         <!-- 微信分享.登录需要自己创建ac继承WXCallbackActivity -->
         <!-- 同理需要建立回调的平台还有支付宝与易信 详情查看文档 -->
         <activity
@@ -125,6 +129,9 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service android:name=".service.BindService"/>
+        <service android:name=".service.StartService"/>
 
 
     </application>

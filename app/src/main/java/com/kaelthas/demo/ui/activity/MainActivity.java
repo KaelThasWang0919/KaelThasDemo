@@ -45,5 +45,6 @@ public class MainActivity extends BaseActivity {
         mDemoList.add(new Demo("友盟三方分享`登录\n(qq,微信,新浪微博)", UmengSocialActivity.class));
         mDemoList.add(new Demo("原生相机\n(Camera1)", CameraActivity.class));
         mDemoList.add(new Demo("第三方WebView\n(Crosswalk)", CrosswalkActivity.class));
+        mDemoList.add(new Demo("两种启动Service发方法\n(Service)", ServiceActivity.class));
     }
 }
