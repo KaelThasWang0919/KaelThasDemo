@@ -101,6 +101,9 @@
             android:parentActivityName=".ui.activity.CameraActivity"
             android:name=".ui.activity.ServiceActivity"/>
 
+        <!--ViewPager-->
+        <activity android:name=".ui.activity.ViewpagerActivity"/>
+
         <!-- 微信分享.登录需要自己创建ac继承WXCallbackActivity -->
         <!-- 同理需要建立回调的平台还有支付宝与易信 详情查看文档 -->
         <activity
