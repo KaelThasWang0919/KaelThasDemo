@@ -93,16 +93,21 @@
 
         <!--第三方webView-->
         <activity
-            android:parentActivityName=".ui.activity.CameraActivity"
-            android:name=".ui.activity.CrosswalkActivity">
+            android:name=".ui.activity.CrosswalkActivity"
+            android:parentActivityName=".ui.activity.CameraActivity">
         </activity>
 
         <activity
-            android:parentActivityName=".ui.activity.CameraActivity"
-            android:name=".ui.activity.ServiceActivity"/>
+            android:name=".ui.activity.ServiceActivity"
+            android:parentActivityName=".ui.activity.CameraActivity"/>
 
         <!--ViewPager-->
-        <activity android:name=".ui.activity.ViewpagerActivity"/>
+        <activity android:name=".ui.activity.ViewpagerActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
+
+        <activity
+            android:name=".ui.activity.DrawerLayoutActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
 
         <!-- 微信分享.登录需要自己创建ac继承WXCallbackActivity -->
         <!-- 同理需要建立回调的平台还有支付宝与易信 详情查看文档 -->

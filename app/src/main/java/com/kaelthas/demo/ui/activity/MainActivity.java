@@ -47,5 +47,6 @@ public class MainActivity extends BaseActivity {
         mDemoList.add(new Demo("第三方WebView\n(Crosswalk)", CrosswalkActivity.class));
         mDemoList.add(new Demo("两种启动Service发方法\n(Service)", ServiceActivity.class));
         mDemoList.add(new Demo("ViewPager\n(ViewPager)", ViewpagerActivity.class));
+        mDemoList.add(new Demo("抽屉\n(DrawerLayout)", DrawerLayoutActivity.class));
     }
 }
