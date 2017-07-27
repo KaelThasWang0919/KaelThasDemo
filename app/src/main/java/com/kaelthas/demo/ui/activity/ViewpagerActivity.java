@@ -3,14 +3,18 @@ package com.kaelthas.demo.ui.activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.kaelthas.demo.R;
 import com.kaelthas.demo.adapter.MyViewPagerAdapter;
 import com.kaelthas.demo.base.BaseActivity;
 import com.kaelthas.demo.databinding.ActivityViewpagerBinding;
 import com.kaelthas.demo.ui.fragment.MyFragment;
+import com.kaelthas.demo.ui.view.KTTransformation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +41,7 @@ public class ViewpagerActivity extends BaseActivity {
         mAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), mList);
 
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 8; i++) {
             Bundle bundle = new Bundle();
             bundle.putString("data", "我是第" + i + "个Fragment");
             MyFragment fragment = new MyFragment();
@@ -48,8 +52,10 @@ public class ViewpagerActivity extends BaseActivity {
 
         ViewPager viewPager = mBinding.viewPager;
         viewPager.setAdapter(mAdapter);
-        viewPager.setCurrentItem(5);
-        mOldFragment = (MyFragment) mList.get(4);
+        viewPager.setOffscreenPageLimit(2);
+        viewPager.setPageTransformer(true,new KTTransformation());
+        viewPager.setCurrentItem(0);
+        mOldFragment = (MyFragment) mList.get(0);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -72,6 +78,7 @@ public class ViewpagerActivity extends BaseActivity {
         });
 
     }
+
 
 
 }

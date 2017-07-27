@@ -20,7 +20,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:background="#f00"
-            android:layout_gravity="start"
+            android:layout_gravity="end"
             android:layout_width="240dp"
             android:layout_height="match_parent">
             <Button
@@ -35,6 +35,30 @@
                 android:layout_height="50dp"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#f00"
+            android:layout_gravity="start"
+            android:layout_width="240dp"
+            android:layout_height="match_parent">
+            <Button
+                android:text="我是侧边栏按妞"
+                android:id="@+id/btn_toast2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:text="我是左抽屉侧栏"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+
+
+
+
 
 
     </android.support.v4.widget.DrawerLayout>
