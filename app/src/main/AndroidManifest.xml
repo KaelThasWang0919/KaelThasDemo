@@ -102,7 +102,8 @@
             android:parentActivityName=".ui.activity.CameraActivity"/>
 
         <!--ViewPager-->
-        <activity android:name=".ui.activity.ViewpagerActivity"
+        <activity
+            android:name=".ui.activity.ViewpagerActivity"
             android:parentActivityName=".ui.activity.MainActivity"/>
 
         <activity
@@ -112,6 +113,11 @@
         <!--web高德地图-->
         <activity
             android:name=".ui.activity.GaoDeMapActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
+
+        <!--可展开的列表-->
+        <activity
+            android:name=".ui.activity.ExpandableListViewActivity"
             android:parentActivityName=".ui.activity.MainActivity"/>
 
         <!-- 微信分享.登录需要自己创建ac继承WXCallbackActivity -->
