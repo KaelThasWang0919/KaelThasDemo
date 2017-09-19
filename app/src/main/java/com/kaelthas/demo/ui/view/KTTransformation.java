@@ -13,7 +13,7 @@ import android.view.View;
  */
 
 public class KTTransformation implements ViewPager.PageTransformer {
-    private static final float MIN_SCALE = 0.85f;
+    private static final float MIN_SCALE = 0.75f;
     private static final float MIN_ALPHA = 0.5f;
 
     @Override
@@ -29,12 +29,21 @@ public class KTTransformation implements ViewPager.PageTransformer {
             float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
             float vertMargin = pageHeight * (1 - scaleFactor) / 2;
             float horzMargin = pageWidth * (1 - scaleFactor) / 2;
+
+            if (0<position&&position<1){
+                scaleFactor=Math.min(1.0f,scaleFactor*1.2f);
+            }
+
             if (position == -1) {
+                //缩放宽高
                 page.setScaleX(scaleFactor);
                 page.setScaleY(scaleFactor);
             } else if (position < 0) {
 
-                page.setTranslationX(horzMargin - vertMargin / 2);
+                page.setScaleX(scaleFactor);
+                page.setScaleY(scaleFactor);
+                //设置偏移
+                page.setTranslationX((horzMargin - vertMargin / 2)/2);
 
             } else if (position == 1) {
                 page.setScaleX(scaleFactor);
