@@ -23,8 +23,14 @@ public class BaseActivity< T extends ViewDataBinding> extends AppCompatActivity 
         this.mContext=this;
     }
 
-    public void showToast(CharSequence msg){
-        Toast.makeText(mContext,msg,Toast.LENGTH_SHORT).show();
+    public void showToast(final CharSequence msg){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(mContext,msg,Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     public void setLayout(@LayoutRes int id){

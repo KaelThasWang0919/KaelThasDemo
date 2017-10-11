@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/action_scan"
+        android:title="扫描"
+        android:orderInCategory="100"
+        android:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/action_stamp"
+        android:title="盖章"
+        android:orderInCategory="100"
+        android:showAsAction="always"/>
+</menu>

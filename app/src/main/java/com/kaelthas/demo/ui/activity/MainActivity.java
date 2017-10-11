@@ -50,5 +50,6 @@ public class MainActivity extends BaseActivity {
         mDemoList.add(new Demo("抽屉\n(DrawerLayout)", DrawerLayoutActivity.class));
         mDemoList.add(new Demo("web高德地图\n(amap)", GaoDeMapActivity.class));
         mDemoList.add(new Demo("可展开列表组件\n(ExpandableListView)", ExpandableListViewActivity.class));
+        mDemoList.add(new Demo("低功耗蓝牙\n(BLE)", BLEActivity.class));
     }
 }
