@@ -127,6 +127,18 @@
             android:name=".ui.activity.ExpandableListViewActivity"
             android:parentActivityName=".ui.activity.MainActivity"/>
 
+        <!--低功耗蓝牙-->
+        <activity android:name=".ui.activity.BLEActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
+
+        <!--NDK-->
+        <activity android:name=".ui.activity.NDKActivity"
+            android:parentActivityName=".ui.activity.MainActivity"/>
+
+
+
+
+
         <!-- 微信分享.登录需要自己创建ac继承WXCallbackActivity -->
         <!-- 同理需要建立回调的平台还有支付宝与易信 详情查看文档 -->
         <activity
