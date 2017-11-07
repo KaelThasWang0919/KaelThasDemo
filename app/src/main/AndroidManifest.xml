@@ -136,6 +136,11 @@
             android:parentActivityName=".ui.activity.MainActivity"/>
 
 
+        <!--Canvas-->
+        <activity android:name=".ui.activity.MyCanvasActivity"
+                  android:parentActivityName=".ui.activity.MainActivity"/>
+
+
 
 
 

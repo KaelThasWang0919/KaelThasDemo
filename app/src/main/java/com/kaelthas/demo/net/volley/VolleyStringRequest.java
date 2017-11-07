@@ -12,6 +12,7 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.kaelthas.demo.base.AppConfig;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
