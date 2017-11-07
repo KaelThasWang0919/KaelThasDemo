@@ -17,6 +17,7 @@ import com.kaelthas.demo.databinding.ActivityDataBindingBinding;
 public class DataBindingActivity extends BaseActivity {
 
     private User mUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +29,26 @@ public class DataBindingActivity extends BaseActivity {
         mUser = new User("张三", "100001");
         binding.setUser(mUser);
 
-        binding.btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mUser.setUserName("李四");
-            }
-        });
+       // binding.btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mUser.setUserName("李四");
+//            }
+//        });
+
+        binding.setClick(new TestClick());
 
 
+    }
+
+    public class TestClick {
+        public void btnClick(String text) {
+            showToast("点击成功");
+            mUser.setUserName("李四"+text);
+        }
+        public void btnClick(View view) {
+            // showToast("点击成功");
+            mUser.setUserName("李四");
+        }
     }
 }
